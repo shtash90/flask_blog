@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}{{ post.title }}{% endblock %}
+{% block content %}
+<h1>{{ post.title }}</h1>
+<p><strong>Muallif:</strong> {{ post.author.username }}</p>
+<p>{{ post.content }}</p>
+<p><small>{{ post.created_at.strftime('%Y-%m-%d %H:%M') }}</small></p>
+<a href="{{ url_for('blog.home') }}">⬅️ Orqaga</a>
+{% endblock %}
