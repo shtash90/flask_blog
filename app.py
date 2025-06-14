@@ -3,7 +3,9 @@ from config import Config
 from models import db
 from routes import auth_bp, blog_bp
 from flask_login import LoginManager
+from flask_migrate import Migrate
 
+migrate = Migrate(app, db)
 app = Flask(__name__)
 app.config.from_object(Config)
 
